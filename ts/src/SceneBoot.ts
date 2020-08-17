@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 
 class SceneBoot extends Phaser.Scene {
     constructor() {
-        super({ key: "SceneBoot" });
+        super({ key: "SceneBoot" })
     }
 
     preload() {
@@ -10,7 +10,7 @@ class SceneBoot extends Phaser.Scene {
     }
 
     create() {
-       this.scene.start("SceneMain");
+       this.scene.start("SceneMain")
     }
 }
 
