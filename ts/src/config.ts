@@ -3,13 +3,13 @@ import SceneMain from './SceneMain'
 
 export var config: Phaser.Types.Core.GameConfig = {
     type: Phaser.WEBGL,
-    width: 640,
-    height: 640,
+    width: 800,
+    height: 600,
     backgroundColor: "black",
     physics: {
         default: "arcade",
         arcade: {
-            gravity: { x: 0, y: 0 }
+            gravity: { x: 0, y: 300 }
         }
     },
     scene: [

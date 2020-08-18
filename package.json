@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon",
-    "build": "rimraf ./build && tsc",
+    "bundle": "tsc && browserify dist/main.js -o dist/bundle.js",
+    "bundle-all": "rimraf ./dist && tsc && browserify dist/main.js -o dist/bundle.js && copyfiles -u 1 html/**/*.* dist/",
     "tsc": "tsc",
     "tscw": "tsc --watch",
     "wp": "webpack",
     "wpw": "webpack --watch",
-    "serve": "http-server build"
+    "serve": "http-server dist"
   },
   "keywords": [],
   "author": "",
@@ -20,11 +21,9 @@
     "phaser": "^3.24.1"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^6.0.3",
+    "copyfiles": "^2.3.0",
     "rimraf": "^3.0.2",
     "ts-loader": "^8.0.2",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "typescript": "^3.9.7"
   }
 }
